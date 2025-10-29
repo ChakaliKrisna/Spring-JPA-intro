@@ -1,6 +1,0 @@
-datajpa\datajpa\AppConfig.class
-datajpa\datajpa\dao\StudentDaoImp.class
-datajpa\datajpa\App.class
-datajpa\datajpa\dao\DB_Config.class
-datajpa\datajpa\dao\Student_DAOs.class
-datajpa\datajpa\entity\Student.class
