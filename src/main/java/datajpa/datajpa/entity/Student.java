@@ -13,10 +13,9 @@ import jakarta.persistence.Table;
 @Table(name="student_spring_boot")
 //@Component
 public class Student {
-	
 	@Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	public int getId() {
 		return id;
@@ -44,7 +43,7 @@ public class Student {
 	}
 	@Column(name="name")
 	private String name;
-	@Column(name="phone number")
+	@Column(name="phone_number")
 	private String phone;
 	@Column(name="address")
 	private  String address;

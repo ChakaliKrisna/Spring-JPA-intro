@@ -1,20 +1,31 @@
 package datajpa.datajpa.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import datajpa.datajpa.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 @Repository
-public class StudentDaoImp implements Student_DAOs {
+public class StudentDaoImp{
+	
+	
+	public StudentDaoImp() {
+		System.out.println("studentdaoimp");
+	}
 
-	@Autowired
+	@PersistenceContext(unitName="mysql")
 	EntityManager entitymanager;
 	
-	@Override
+
+	@Transactional
 	public void saveStudent(Student student) {
 		// TODO Auto-generated method stub
+		entitymanager.merge(student);
+//		entitymanager.Persist()
+		System.out.println("inserted");
+		
 		
 		
 	}

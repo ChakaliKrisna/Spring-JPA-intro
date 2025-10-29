@@ -17,15 +17,18 @@ public class App
         System.out.println( "Hello World!" );
         Student krishna=new Student();
         krishna.setAddress("hyd");
-        krishna.setId(183);;
-        krishna.setName("krishna");
-        krishna.setPhone("7780351721");
+        krishna.setId(185);
+        krishna.setName("arav");
+        krishna.setPhone("7780351756");
         
 //        Student_DAOs studentdao=new StudentDaoImp();
         AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
 //        container.register()
-        Student_DAOs studentdao =context.getBean("StudentDapImp",StudentDaoImp.class);
-        studentdao.saveStudent(krishna);
+        Student_DAOs studentdao =context.getBean("student_DAOs",Student_DAOs.class);
+       
+        studentdao.save(krishna);
+        
+//        studentdao.saveStudent(krishna);
         
         	
     }
